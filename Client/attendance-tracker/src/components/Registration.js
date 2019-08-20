@@ -1,13 +1,12 @@
 import React from 'react';
-import Slider from "../components/Slider";
+import Slide from "./Register/Slide";
+import '../components/Register/Register.css';
 
 export default function Registration() {
     return (
         <div>
             <h1>Hello from Registration</h1>
-            <Slider>
-                <h2>Hello from slider</h2>
-            </Slider>
+            <Slide />
         </div>
     )
 }
