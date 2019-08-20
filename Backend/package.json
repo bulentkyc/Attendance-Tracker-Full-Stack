@@ -4,13 +4,27 @@
     "description": "attendance tracked",
     "main": "index.js",
     "scripts": {
+<<<<<<< HEAD
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "client": "cd client && npm start",
+        "server": "nodemon index.js",
+        "dev": "concurrently --kill-others-on-fail \"npm index\" \"npm client\""
+=======
         "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> master
     },
     "author": "fbw6",
     "license": "ISC",
     "dependencies": {
         "body-parser": "^1.19.0",
+<<<<<<< HEAD
+        "concurrently": "^4.1.2",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "nodemon": "^1.19.1"
+=======
         "cors": "^2.8.5",
         "express": "^4.17.1"
+>>>>>>> master
     }
 }
