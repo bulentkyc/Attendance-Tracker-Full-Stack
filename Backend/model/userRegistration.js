@@ -5,7 +5,7 @@ let usersRegistrationSchema = new connection.Schema({
     type: String,
     require: true
   },
-emailUser: {
+  emailUser: {
     type: String,
     required: true
   },

@@ -2,7 +2,7 @@ import userRegistration from '..model/userRegistration'
 
 
 
-export.newUserForm = (req,res) =>{
+exports.newUserForm = (req,res) =>{
     let errors = []
     let newUser = {
         newUserID : req.body.newUserID,
@@ -13,7 +13,7 @@ export.newUserForm = (req,res) =>{
     userRegistration.create(newUser,(err, newUser)=>{
 
         if(err) {
-               errors.push({'control ypur data'})
+               errors.push({'control your data'})
                res.Json({
                    status:'error',
                    errors
