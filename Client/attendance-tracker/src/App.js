@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Homepage from "./components/Homepage";
 import Login from "./components/Login";
-import Registration from "./components/Registration";
+import Registration from "./components/Registration/Registration";
 import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -50,3 +50,22 @@ export default App;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+function App() {
+  return (
+    <div>
+      <h1>Hello from App</h1>
+      <Switch>
+        <Route exact path="/" Component={Homepage} />
+        <Route path="/login" Component={Login} />
+        <Route path="/registration" Component={Registration} />
+      </Switch>
+    </div>
+  );
+}
+
+export default App;
+>>>>>>> master
+>>>>>>> 3b58cd9635fede3bd32530db630c2934a60ecdfe
