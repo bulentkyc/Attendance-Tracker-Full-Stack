@@ -21,7 +21,7 @@ export default class Registration extends React.Component {
 					<input type="email" placeholder="Email" />
 					{this.state.status === 'Observer' ? (
 						<React.Fragment>
-							<input type="text" placeholder="Class" /> <input type="text" placeholder="School" />{' '}
+							<input type="text" placeholder="Class" /> <input type="text" placeholder="School" />
 						</React.Fragment>
 					) : null}
 				</form>
