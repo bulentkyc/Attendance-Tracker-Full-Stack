@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Slider.css';
+import Slider from './Slider';
 
-export default function Registration() {
-  return (  
-    <div>
-      <div> Hello </div>
-    </div>
-  )
+export default class Register extends Component {
+  render() {
+    return (
+      <div>
+        <div> Hello </div>
+        <Slider />
+      </div>
+    )
+  }
 }
