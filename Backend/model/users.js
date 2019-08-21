@@ -15,6 +15,5 @@ let usersRegistrationSchema = new connection.Schema({
   }
 })
 
-let users = connection.model('users', usersRegistrationSchema)
+exports.users = connection.model('users', usersRegistrationSchema)
 
-module.exports = users
