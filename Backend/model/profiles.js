@@ -31,4 +31,4 @@ let profileFormSchema = new connection.Schema({
   }
 })
 
-exports.classes = connection.model('profiles', profileFormSchema);
+exports.profiles = connection.model('profiles', profileFormSchema);
