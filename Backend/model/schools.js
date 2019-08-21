@@ -8,4 +8,4 @@ let schoolSchema = new connection.Schema({
 })
 
 
-exports.classes = connection.model('school', schoolSchema);
+exports.school = connection.model('school', schoolSchema);
