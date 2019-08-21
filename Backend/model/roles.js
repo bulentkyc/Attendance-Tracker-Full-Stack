@@ -7,4 +7,4 @@ let roleRegistration = new connection.Schema({
   }
 })
 
-exports.classes = connection.model('roles', roleRegistration)
+exports.roles = connection.model('roles', roleRegistration)
