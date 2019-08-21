@@ -1,0 +1,71 @@
+
+  .containerForm{
+    width: 25%;
+    margin: 10% auto;
+    padding-top: 40px;
+    text-align: center;
+    border-radius: 5px;  
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.07) 0%,
+              rgba(0, 0, 0, 0.81) 72.08%), 
+                url('https://source.unsplash.com/random?sig=10');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+  } 
+  h1{
+    color: white;
+  }
+  .fa-plus{
+    color: white;
+    font-size: 24px;
+  }
+  
+  .fa-user, .fa-envelope, .fa-lock{
+    font-size: 25px;
+    color: white;
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column; 
+    padding: 4%;
+  }
+  
+  input{
+    width: 70%;
+    padding: 20px 15px 15px 20px;
+      margin: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;  
+    transition: all .5s;
+    transform-origin: left;
+  } 
+  input:hover{
+    transform: scale(1.1);
+  }
+  
+  
+  input:focus{
+    outline: none;
+  }
+  
+  input[type="submit"]{
+    width: 30%;
+    padding: 0;
+    -webkit-appearance: none;
+    margin: 30px auto;
+    height: 50px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;  
+  } 
+  .button{
+    transition: all .5s;
+    transform-origin: top;
+  } 
+  .button:hover{
+    transform: scale(1.1);
+  }
+  
