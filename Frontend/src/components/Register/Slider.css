@@ -8,7 +8,6 @@
 	border-radius: 25px;
 	margin-top: 15px;
 }
-
 .swiper-slide {
 	max-width: 42%;
 	display: flex;
@@ -45,7 +44,6 @@
 .swiper-button-next {
 	right: 40%;
 }
-
 @media screen and (max-width: 720px) {
 	.swiper-container {
 		height: 15rem !important;
