@@ -1,7 +1,7 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
 
-const Slide = () => {
+const Slide = (props) => {
     const params = {
         pagination: {
             el: '.swiper-pagination',
@@ -13,16 +13,35 @@ const Slide = () => {
             prevEl: '.swiper-button-prev'
         },
         slidesPerView: 'auto',
-        spaceBetween: 100,
+        spaceBetween: 50,
         loop: true,
         centeredSlides: true,
+        on: {
+            slideChangeTransitionStart: props.swiperHandler
+        }
     }
     return (
         <Swiper {...params}>
-            <img src='./img/attendee.png' alt="attendee" /><p>Attendee</p>
-            <img src='./img/trainer.png' alt="trainer" /><p>Trainer</p>
-            <img src='./img/management.png' alt="manager" /><p>Management</p>
-            <img src='./img/observer.png' alt="observer" /><p></p>
+            <figure>
+                <img src='./img/attendee.png' alt="Attendee" />
+                <figcaption>Attendee</figcaption>
+            </figure>
+            <figure>
+                <img src='./img/trainer.png' alt="Trainer" />
+                <figcaption>Trainer</figcaption>
+            </figure>
+            <figure>
+                <img src='./img/management.png' alt="Manager" />
+                <figcaption>Manager</figcaption>
+            </figure>
+            <figure>
+                <img src='./img/observer.png' alt="Observer" />
+                <figcaption>Observer</figcaption>
+            </figure>
+
+
+
+
         </Swiper>
     )
 }
