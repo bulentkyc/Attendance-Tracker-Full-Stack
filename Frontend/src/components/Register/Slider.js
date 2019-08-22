@@ -19,10 +19,10 @@ const Slide = () => {
     }
     return (
         <Swiper {...params}>
-            <img src='./img/attendee.png' alt="attendee" />
-            <img src='./img/trainer.png' alt="trainer" />
-            <img src='./img/management.png' alt="manager" />
-            <img src='./img/observer.png' alt="observer" />
+            <img src='./img/attendee.png' alt="attendee" /><p>Attendee</p>
+            <img src='./img/trainer.png' alt="trainer" /><p>Trainer</p>
+            <img src='./img/management.png' alt="manager" /><p>Management</p>
+            <img src='./img/observer.png' alt="observer" /><p></p>
         </Swiper>
     )
 }
