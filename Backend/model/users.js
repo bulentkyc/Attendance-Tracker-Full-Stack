@@ -3,9 +3,7 @@ const connection = require('../config/databaseConnection')
 let usersRegistrationSchema = new connection.Schema({
   emailUser: {
     type: String,
-    required: true,
-    unique;:true,
-    match: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+    required: true
   },
   passwordUser: {
     type: String,
@@ -18,4 +16,3 @@ let usersRegistrationSchema = new connection.Schema({
 })
 
 exports.users = connection.model('users', usersRegistrationSchema)
-

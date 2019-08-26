@@ -7,5 +7,4 @@ let schoolSchema = new connection.Schema({
   }
 })
 
-
-exports.school = connection.model('school', schoolSchema);
+exports.school = connection.model('school', schoolSchema)

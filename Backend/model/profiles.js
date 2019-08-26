@@ -28,6 +28,10 @@ let profileFormSchema = new connection.Schema({
   schoolId: {
     type: String,
     require: false
+  },
+  avatar: {
+    type: String,
+    require: true
   }
 })
 
