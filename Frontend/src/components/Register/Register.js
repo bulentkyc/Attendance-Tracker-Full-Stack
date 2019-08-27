@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import './Register.css';
-import './Slider.css';
 import Slider from './Slider';
+import './Register.scss';
 
 export default class Registration extends React.Component {
   state = {
@@ -12,15 +11,18 @@ export default class Registration extends React.Component {
     secondPassword: '',
     errors: [],
     status: ''
-  }
+  };
+  // This func is for selecting the active class in swiper and to picking up the property (alt) and updating the status in the state
   swiperHandler = () => {
     let activeImg = document.querySelector('.swiper-slide-active');
+    console.log(activeImg.firstChild.alt);
     this.setState({ status: activeImg.firstChild.alt });
-  }
+  };
+
   updateValue = (event) => {
-    console.log(this.state)
-    this.setState({ [event.target.name]: event.target.value })
-  }
+    console.log(this.state);
+    this.setState({ [event.target.name]: event.target.value });
+  };
 
   registration = (event) => {
     event.preventDefault();
@@ -43,7 +45,7 @@ export default class Registration extends React.Component {
           } else {
             this.setState({ errors: response.data.errors });
             // reset password
-            this.setState({ password: '', secondPassword: '' })
+            this.setState({ password: '', secondPassword: '' });
           }
         })
         .catch((err) => {
@@ -51,9 +53,9 @@ export default class Registration extends React.Component {
         });
     } else {
       // resetting Password Field
-      this.setState({ password: '', secondPassword: '' })
+      this.setState({ password: '', secondPassword: '' });
     }
-  }
+  };
 
   validation(obj) {
     let errors = [];
@@ -82,38 +84,62 @@ export default class Registration extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Slider swiperHandler={this.swiperHandler} />
-        <div className='containerForm' >
-          <h1> <i className="fas fa-plus"></i> Register {this.state.status}</h1>
+        <div className="containerForm">
+          <Slider swiperHandler={this.swiperHandler} />
+          <h1>Register {this.state.status}</h1>
           {this.state.errors.map((error, index) => (
-            <p className='error' key={index}>
+            <p className="error" key={index}>
               {error}
             </p>
           ))}
           <form onSubmit={this.registration}>
             <div>
-              <i className="fas fa-user"></i>
-              <input type="text" placeholder="Enter Name" name='userName' onChange={this.updateValue} value={this.state.userName} />
+              <i className="fas fa-user" />
+              <input
+                type="text"
+                placeholder="Enter Name"
+                name="userName"
+                onChange={this.updateValue}
+                value={this.state.userName}
+              />
             </div>
 
             <div>
-              <i className="fas fa-envelope"></i>
-              <input type="text" placeholder="Enter Email" name='email' onChange={this.updateValue} value={this.state.email} />
+              <i className="fas fa-envelope" />
+              <input
+                type="text"
+                placeholder="Enter Email"
+                name="email"
+                onChange={this.updateValue}
+                value={this.state.email}
+              />
             </div>
 
             <div>
-              <i className="fas fa-lock"></i>
-              <input type="password" placeholder="Create Password" name='password' onChange={this.updateValue} value={this.state.password} />
+              <i className="fas fa-lock" />
+              <input
+                type="password"
+                placeholder="Create Password"
+                name="password"
+                onChange={this.updateValue}
+                value={this.state.password}
+              />
             </div>
 
             <div>
-              <i className="fas fa-lock"></i>
-              <input type="password" placeholder="Confirm Password" name='secondPassword' onChange={this.updateValue} value={this.state.secondPassword} />
+              <i className="fas fa-lock" />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                name="secondPassword"
+                onChange={this.updateValue}
+                value={this.state.secondPassword}
+              />
             </div>
             <input type="submit" value="Register" className="button" />
           </form>
         </div>
       </React.Fragment>
-    )
+    );
   }
 }

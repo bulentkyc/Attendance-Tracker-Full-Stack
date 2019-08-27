@@ -1,49 +1,51 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
+import './Slider.scss';
 
 const Slide = (props) => {
     const params = {
         pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
-            clickable: true,
+            clickable: true
         },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         },
+        brackpoints: {
+            720: {
+                spaceBetween: 10
+            }
+        },
         slidesPerView: 'auto',
-        spaceBetween: 50,
+        spaceBetween: 90,
         loop: true,
         centeredSlides: true,
         on: {
             slideChangeTransitionStart: props.swiperHandler
         }
-    }
+    };
     return (
         <Swiper {...params}>
             <figure>
-                <img src='./img/attendee.png' alt="Attendee" />
-                <figcaption>Attendee</figcaption>
+                <img src="./img/attendee.png" alt="Attendee" />
+                {/* <figcaption>Attendee</figcaption> */}
             </figure>
             <figure>
-                <img src='./img/trainer.png' alt="Trainer" />
-                <figcaption>Trainer</figcaption>
+                <img src="./img/trainer.png" alt="Trainer" />
+                {/* <figcaption>Trainer</figcaption> */}
             </figure>
             <figure>
-                <img src='./img/management.png' alt="Manager" />
-                <figcaption>Manager</figcaption>
+                <img src="./img/management.png" alt="Manager" />
+                {/* <figcaption>Manager</figcaption> */}
             </figure>
             <figure>
-                <img src='./img/observer.png' alt="Observer" />
-                <figcaption>Observer</figcaption>
+                <img src="./img/observer.png" alt="Observer" />
+                {/* <figcaption>Observer</figcaption> */}
             </figure>
-
-
-
-
         </Swiper>
-    )
-}
+    );
+};
 
 export default Slide;
