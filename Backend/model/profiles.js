@@ -23,14 +23,16 @@ let profileFormSchema = new connection.Schema({
   },
   classId: {
     type: String,
-    require: true
+    require: false
   },
   schoolId: {
+    type: String,
+    require: false
+  },
+  avatar: {
     type: String,
     require: true
   }
 })
 
-let userProfile = connection.model('students', profileFormSchema)
-
-module.exports = userProfile
+exports.profiles = connection.model('profiles', profileFormSchema);
